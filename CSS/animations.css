@@ -1,0 +1,64 @@
+/* ================================================
+   AUTION MOBILITY — ANIMATIONS & REVEAL
+   ================================================ */
+
+/* Scroll reveal targets */
+.reveal-target {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-target.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered service cards */
+.service-card:nth-child(1) { transition-delay: 0s; }
+.service-card:nth-child(2) { transition-delay: 0.1s; }
+.service-card:nth-child(3) { transition-delay: 0.2s; }
+.service-card:nth-child(4) { transition-delay: 0.3s; }
+
+/* FAQ item stagger */
+.faq__item:nth-child(1) { transition-delay: 0s; }
+.faq__item:nth-child(2) { transition-delay: 0.06s; }
+.faq__item:nth-child(3) { transition-delay: 0.12s; }
+.faq__item:nth-child(4) { transition-delay: 0.18s; }
+.faq__item:nth-child(5) { transition-delay: 0.24s; }
+.faq__item:nth-child(6) { transition-delay: 0.30s; }
+.faq__item:nth-child(7) { transition-delay: 0.36s; }
+.faq__item:nth-child(8) { transition-delay: 0.42s; }
+
+/* Media card stagger */
+.media-card:nth-child(1) { transition-delay: 0s; }
+.media-card:nth-child(2) { transition-delay: 0.12s; }
+
+/* Contact btn stagger */
+.contact-btn:nth-child(1) { transition-delay: 0s; }
+.contact-btn:nth-child(2) { transition-delay: 0.1s; }
+
+/* Active nav link */
+.nav__links a.active {
+  color: var(--gold) !important;
+}
+
+/* Input date color fix for dark theme */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7) sepia(1) saturate(3) hue-rotate(10deg);
+  cursor: pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--dark-5);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Selection highlight */
+::selection {
+  background: rgba(245, 197, 24, 0.25);
+  color: var(--white);
+}
